@@ -26,7 +26,7 @@ public class OptionMenu {
 					Map.Entry pair = (Map.Entry) it.next();
 					Account acc = (Account) pair.getValue();
 					if (data.containsKey(customerNumber) && pinNumber == acc.getPinNumber()) {
-						getAccountType(acc);
+						getAccountSelect(acc);
 						end = true;
 						break;
 					}
@@ -40,14 +40,14 @@ public class OptionMenu {
 		}
 	}
 
-	public void getAccountType(Account acc) {
+	public void getAccountSelect(Account acc) {
 		boolean end = false;
 		while (!end) {
 			try {
 				System.out.println("\nSelect the account you want to access: ");
-				System.out.println(" Type 1 - Checkings Account");
-				System.out.println(" Type 2 - Savings Account");
-				System.out.println(" Type 3 - Exit");
+				System.out.println(" Select 1 - Checkings Account");
+				System.out.println(" Select 2 - Savings Account");
+				System.out.println(" Select 3 - Exit");
 				System.out.print("\nChoice: ");
 
 				int selection = menuInput.nextInt();
@@ -63,10 +63,10 @@ public class OptionMenu {
 					end = true;
 					break;
 				default:
-					System.out.println("\nInvalid Choice.");
+					System.out.println("\n Choice you made is invalid !");
 				}
 			} catch (InputMismatchException e) {
-				System.out.println("\nInvalid Choice.");
+				System.out.println("\n Choice you made is invalid !");
 				menuInput.next();
 			}
 		}
@@ -77,11 +77,11 @@ public class OptionMenu {
 		while (!end) {
 			try {
 				System.out.println("\nCheckings Account: ");
-				System.out.println(" Type 1 - View Balance");
-				System.out.println(" Type 2 - Withdraw Funds");
-				System.out.println(" Type 3 - Deposit Funds");
-				System.out.println(" Type 4 - Transfer Funds");
-				System.out.println(" Type 5 - Exit");
+				System.out.println(" Select 1 - View Balance");
+				System.out.println(" Select 2 - Withdraw Funds");
+				System.out.println(" Select 3 - Deposit Funds");
+				System.out.println(" Select 4 - Transfer Funds");
+				System.out.println(" Select 5 - Exit");
 				System.out.print("\nChoice: ");
 
 				int selection = menuInput.nextInt();
@@ -104,10 +104,10 @@ public class OptionMenu {
 					end = true;
 					break;
 				default:
-					System.out.println("\nInvalid Choice.");
+					System.out.println("\n Choice you made is invalid !");
 				}
 			} catch (InputMismatchException e) {
-				System.out.println("\nInvalid Choice.");
+				System.out.println("\n Choice you made is invalid !");
 				menuInput.next();
 			}
 		}
@@ -118,11 +118,11 @@ public class OptionMenu {
 		while (!end) {
 			try {
 				System.out.println("\nSavings Account: ");
-				System.out.println(" Type 1 - View Balance");
-				System.out.println(" Type 2 - Withdraw Funds");
-				System.out.println(" Type 3 - Deposit Funds");
-				System.out.println(" Type 4 - Transfer Funds");
-				System.out.println(" Type 5 - Exit");
+				System.out.println(" Select 1 - View Balance");
+				System.out.println(" Select 2 - Withdraw Funds");
+				System.out.println(" Select 3 - Deposit Funds");
+				System.out.println(" Select 4 - Transfer Funds");
+				System.out.println(" Select 5 - Exit");
 				System.out.print("Choice: ");
 				int selection = menuInput.nextInt();
 				switch (selection) {
@@ -142,10 +142,10 @@ public class OptionMenu {
 					end = true;
 					break;
 				default:
-					System.out.println("\nInvalid Choice.");
+					System.out.println("\n Choice you made is invalid !");
 				}
 			} catch (InputMismatchException e) {
-				System.out.println("\nInvalid Choice.");
+				System.out.println("\n Choice you made is invalid !");
 				menuInput.next();
 			}
 		}
@@ -169,7 +169,7 @@ public class OptionMenu {
 					System.out.println("\nThis customer number is already registered");
 				}
 			} catch (InputMismatchException e) {
-				System.out.println("\nInvalid Choice.");
+				System.out.println("\n Choice you made is invalid !");
 				menuInput.next();
 			}
 		}
@@ -187,8 +187,8 @@ public class OptionMenu {
 		boolean end = false;
 		while (!end) {
 			try {
-				System.out.println("\n Type 1 - Login");
-				System.out.println(" Type 2 - Create Account");
+				System.out.println("\n Select 1 -> Login");
+				System.out.println(" Select 2 -> Create Account");
 				System.out.print("\nChoice: ");
 				int choice = menuInput.nextInt();
 				switch (choice) {
@@ -201,14 +201,14 @@ public class OptionMenu {
 					end = true;
 					break;
 				default:
-					System.out.println("\nInvalid Choice.");
+					System.out.println("\n Choice you made is invalid !");
 				}
 			} catch (InputMismatchException e) {
-				System.out.println("\nInvalid Choice.");
+				System.out.println("\n Choice you made is invalid !");
 				menuInput.next();
 			}
 		}
-		System.out.println("\nThank You for using this ATM.\n");
+		System.out.println("\nThank you for choosing our ATM!.\n");
 		menuInput.close();
 		System.exit(0);
 	}

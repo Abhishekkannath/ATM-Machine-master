@@ -94,11 +94,14 @@ public class Account {
 					calcCheckingWithdraw(amount);
 					System.out.println("\nCurrent Checkings Account Balance: " + moneyFormat.format(checkingBalance));
 					end = true;
+				}
+				else if(amount<=0){
+					System.out.println(" Sorry... Invalid amount.");
 				} else {
-					System.out.println("\nBalance Cannot be Negative.");
+					System.out.println("\n Insufficient Balance...");
 				}
 			} catch (InputMismatchException e) {
-				System.out.println("\nInvalid Choice.");
+				System.out.println("\n Invalid Choice.");
 				input.next();
 			}
 		}
